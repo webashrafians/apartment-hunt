@@ -7,6 +7,7 @@ import {
 import Home from './Component/Home/Home/Home';
 import NotFound from './Component/NotFound/NotFound';
 import HouseRentDetails from './Component/Home/Home/HouserentDetails/HouserentDetails';
+import Login from './Component/Login/Login';
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
         </Route>
         <Route exact path="/houserentdetails">
           <HouseRentDetails></HouseRentDetails>
+        </Route>
+        <Route exact path="/login">
+          <Login></Login>
         </Route>
 
 
