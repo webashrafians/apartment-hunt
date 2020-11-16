@@ -47,7 +47,7 @@ const Footer = () => {
                     <div className="col-sm-6 col-md-3" style={{ marginLeft: '57px' }}>
                     <h6 className="footer-title">About Us</h6>
                         <p >We are the top real estate agency in Sydney, with agents available to answer any question 24/7.</p>
-                        <div style={{ marginTop: "36px" }} className="footer-contact-icon">
+                        <div style={{ marginTop: "36px" }} className="social-icon">
                             <Link to="#"><img src={facebook} alt="" height="23" width="23" style={{ marginRight: '30px' }} /></Link>
                             <Link to="#"><img src={instagram} alt="" height="23" width="23" style={{ marginRight: '30px' }} /></Link>
                             <Link to="#"><img src={linkedIn} alt="" height="23" width="23" style={{ marginRight: '30px' }} /></Link>

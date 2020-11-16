@@ -2,12 +2,11 @@ import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import Home from './Component/Home/Home/Home';
 import NotFound from './Component/NotFound/NotFound';
-
+import HouseRentDetails from './Component/Home/Home/HouserentDetails/HouserentDetails';
 
 function App() {
   return (
@@ -15,6 +14,9 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Home></Home>
+        </Route>
+        <Route exact path="/houserentdetails">
+          <HouseRentDetails></HouseRentDetails>
         </Route>
 
 

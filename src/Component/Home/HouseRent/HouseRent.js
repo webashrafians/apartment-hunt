@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import location from '../../../images/location.png';
 import bathroom from '../../../images/bath.png';
 import bedroom from '../../../images/bed.png';
@@ -15,40 +15,73 @@ const HouseRent = () => {
 
     const hrData = [
         {
-            title: 'Epic Huda Palacio',
+            id: 1,
+            title: "Avanna Apartment",
             img: House1,
-            price: '$356'
-        },
+            price: 350,
+            place: "Kadomtoli H/S, Chattogram",
+            ablility: [ "3 Bedroom", "3 Bathroom" ],
+            details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia aperiam ea soluta architecto doloremque iste.",
+            priceDetail: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia deserunt ipsam officia aliquid beatae quasi alias excepturi, magni eum ut optio unde labore tenetur laborum voluptates delectus, animi quam sequi. Quia deserunt ipsam officia aliquid beatae quasi alias excepturi, magni eum ut optio unde labore tenetur laborum voluptates delectus, animi quam sequi.",
+            propertyDetail: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, illum unde ut id perspiciatis fugiat inventore molestiae dolore natus enim non dolores in sint ab rem ducimus, illo eum laboriosam ad delectus? Incidunt repudiandae modi quisquam libero id assumenda! Magnam laborum voluptatibus eveniet incidunt fugit consequuntur nihil mollitia, commodi nesciunt molestias vero, veritatis corporis quam ullam debitis non facilis ratione! Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, illum unde ut id perspiciatis fugiat inventore molestiae dolore natus enim non dolores in sint ab rem ducimus, illo eum laboriosam ad delectus? Incidunt repudiandae modi quisquam libero id assumenda! Magnam laborum voluptatibus eveniet incidunt fugit consequuntur nihil mollitia, commodi nesciunt molestias vero, veritatis corporis quam ullam debitis non facilis ratione!"
+        },        
         {
-            title: 'Epic Huda Palacio',
+            id: 2,
+            title: "Family Apartment Three",
             img: House2,
-            price: '$356'
-        },
+            price: 380,
+            place: "Hatimtali H/S, Chattogram",
+            ablility: [ "2 Bedroom", "3 Bathroom" ],
+            details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia aperiam ea soluta architecto doloremque iste.",
+            priceDetail: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia deserunt ipsam officia aliquid beatae quasi alias excepturi, magni eum ut optio unde labore tenetur laborum voluptates delectus, animi quam sequi. Quia deserunt ipsam officia aliquid beatae quasi alias excepturi, magni eum ut optio unde labore tenetur laborum voluptates delectus, animi quam sequi.",
+            propertyDetail: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, illum unde ut id perspiciatis fugiat inventore molestiae dolore natus enim non dolores in sint ab rem ducimus, illo eum laboriosam ad delectus? Incidunt repudiandae modi quisquam libero id assumenda! Magnam laborum voluptatibus eveniet incidunt fugit consequuntur nihil mollitia, commodi nesciunt molestias vero, veritatis corporis quam ullam debitis non facilis ratione! Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, illum unde ut id perspiciatis fugiat inventore molestiae dolore natus enim non dolores in sint ab rem ducimus, illo eum laboriosam ad delectus? Incidunt repudiandae modi quisquam libero id assumenda! Magnam laborum voluptatibus eveniet incidunt fugit consequuntur nihil mollitia, commodi nesciunt molestias vero, veritatis corporis quam ullam debitis non facilis ratione!"
+        },        
         {
-            title: 'Epic Huda Palacio',
+            id: 3,
+            title: "Chayaghor Resorte",
             img: House3,
-            price: '$356'
-        },
+            price: 450,
+            place: "Hatimtali H/S, Chattogram",
+            ablility: [ "2 Bedroom", "3 Bathroom" ],
+            details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia aperiam ea soluta architecto doloremque iste.",
+            priceDetail: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia deserunt ipsam officia aliquid beatae quasi alias excepturi, magni eum ut optio unde labore tenetur laborum voluptates delectus, animi quam sequi. Quia deserunt ipsam officia aliquid beatae quasi alias excepturi, magni eum ut optio unde labore tenetur laborum voluptates delectus, animi quam sequi.",
+            propertyDetail: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, illum unde ut id perspiciatis fugiat inventore molestiae dolore natus enim non dolores in sint ab rem ducimus, illo eum laboriosam ad delectus? Incidunt repudiandae modi quisquam libero id assumenda! Magnam laborum voluptatibus eveniet incidunt fugit consequuntur nihil mollitia, commodi nesciunt molestias vero, veritatis corporis quam ullam debitis non facilis ratione! Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, illum unde ut id perspiciatis fugiat inventore molestiae dolore natus enim non dolores in sint ab rem ducimus, illo eum laboriosam ad delectus? Incidunt repudiandae modi quisquam libero id assumenda! Magnam laborum voluptatibus eveniet incidunt fugit consequuntur nihil mollitia, commodi nesciunt molestias vero, veritatis corporis quam ullam debitis non facilis ratione!"
+        },        
         {
-            title: 'Epic Huda Palacio',
+            id: 4,
+            title: "Holi Family Lodge",
             img: House4,
-            price: '$356'
-        },
+            price: 375,
+            place: "Kadomtali H/S, Chattogram",
+            ablility: [ "2 Bedroom", "3 Bathroom" ],
+            details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia aperiam ea soluta architecto doloremque iste.",
+            priceDetail: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia deserunt ipsam officia aliquid beatae quasi alias excepturi, magni eum ut optio unde labore tenetur laborum voluptates delectus, animi quam sequi. Quia deserunt ipsam officia aliquid beatae quasi alias excepturi, magni eum ut optio unde labore tenetur laborum voluptates delectus, animi quam sequi.",
+            propertyDetail: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, illum unde ut id perspiciatis fugiat inventore molestiae dolore natus enim non dolores in sint ab rem ducimus, illo eum laboriosam ad delectus? Incidunt repudiandae modi quisquam libero id assumenda! Magnam laborum voluptatibus eveniet incidunt fugit consequuntur nihil mollitia, commodi nesciunt molestias vero, veritatis corporis quam ullam debitis non facilis ratione! Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, illum unde ut id perspiciatis fugiat inventore molestiae dolore natus enim non dolores in sint ab rem ducimus, illo eum laboriosam ad delectus? Incidunt repudiandae modi quisquam libero id assumenda! Magnam laborum voluptatibus eveniet incidunt fugit consequuntur nihil mollitia, commodi nesciunt molestias vero, veritatis corporis quam ullam debitis non facilis ratione!"
+        },        
         {
-            title: 'Epic Huda Palacio',
+            id: 5,
+            title: "Proshanto Resorte",
             img: House5,
-            price: '$356'
-        },
+            price: 650,
+            place: "Nimtala H/S, Chattogram",
+            ablility: [ "2 Bedroom", "4 Bathroom" ],
+            details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia aperiam ea soluta architecto doloremque iste.",
+            priceDetail: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia deserunt ipsam officia aliquid beatae quasi alias excepturi, magni eum ut optio unde labore tenetur laborum voluptates delectus, animi quam sequi. Quia deserunt ipsam officia aliquid beatae quasi alias excepturi, magni eum ut optio unde labore tenetur laborum voluptates delectus, animi quam sequi.",
+            propertyDetail: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, illum unde ut id perspiciatis fugiat inventore molestiae dolore natus enim non dolores in sint ab rem ducimus, illo eum laboriosam ad delectus? Incidunt repudiandae modi quisquam libero id assumenda! Magnam laborum voluptatibus eveniet incidunt fugit consequuntur nihil mollitia, commodi nesciunt molestias vero, veritatis corporis quam ullam debitis non facilis ratione! Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, illum unde ut id perspiciatis fugiat inventore molestiae dolore natus enim non dolores in sint ab rem ducimus, illo eum laboriosam ad delectus? Incidunt repudiandae modi quisquam libero id assumenda! Magnam laborum voluptatibus eveniet incidunt fugit consequuntur nihil mollitia, commodi nesciunt molestias vero, veritatis corporis quam ullam debitis non facilis ratione!"
+        },        
         {
-            title: 'Epic Huda Palacio',
+            id: 6,
+            title: "Ashalata Bichung Lodge",
             img: House6,
-            price: '$356'
+            price: 520,
+            place: "Hatimtali H/S, Chattogram",
+            ablility: [ "2 Bedroom", "3 Bathroom" ],
+            details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia aperiam ea soluta architecto doloremque iste.",
+            priceDetail: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia deserunt ipsam officia aliquid beatae quasi alias excepturi, magni eum ut optio unde labore tenetur laborum voluptates delectus, animi quam sequi. Quia deserunt ipsam officia aliquid beatae quasi alias excepturi, magni eum ut optio unde labore tenetur laborum voluptates delectus, animi quam sequi.",
+            propertyDetail: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, illum unde ut id perspiciatis fugiat inventore molestiae dolore natus enim non dolores in sint ab rem ducimus, illo eum laboriosam ad delectus? Incidunt repudiandae modi quisquam libero id assumenda! Magnam laborum voluptatibus eveniet incidunt fugit consequuntur nihil mollitia, commodi nesciunt molestias vero, veritatis corporis quam ullam debitis non facilis ratione! Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, illum unde ut id perspiciatis fugiat inventore molestiae dolore natus enim non dolores in sint ab rem ducimus, illo eum laboriosam ad delectus? Incidunt repudiandae modi quisquam libero id assumenda! Magnam laborum voluptatibus eveniet incidunt fugit consequuntur nihil mollitia, commodi nesciunt molestias vero, veritatis corporis quam ullam debitis non facilis ratione!"
         }
 
     ]
-
-
-
 
     return (
         <div style={{backgroundColor:"#F1F6F4"}}>
@@ -70,16 +103,16 @@ const HouseRent = () => {
                                         <h5 className="card-title" style={{color: '#16322E', fontSize: '24px', fontWeight: 'bold'}}>{house.title}</h5>
                                         <div className="card-text">
                                             <img src={location} alt="" height="20" width="15"/>
-                                            <span style={{color: '#747474', marginBottom:'8px'}}> Nasirabad H/S, Chattogram</span>   
+                                            <span style={{color: '#747474', marginBottom:'8px'}}> {house.place}</span>   
                                         </div>
                                         <div style={{display: 'flex',marginBottom:'42px'}}>
                                             <div>
                                                 <img src={bedroom} alt="" height="20" width="15"/>
-                                                <span style={{color: '#747474'}}> 3 bedrooms</span>
+                                                <span style={{color: '#747474'}}> {house.ablility[0]} </span>
                                             </div>
                                             <div style={{marginLeft: '60px'}}>
                                                 <img src={bathroom} alt="" height="20" width="15"/>
-                                                <span style={{color: '#747474'}}> 2 bathrooms</span>
+                                                <span style={{color: '#747474'}}> {house.ablility[1]} </span>
                                             </div>
                                         </div>
                                         <div style={{display: 'flex'}}>
